@@ -1,6 +1,8 @@
 import React from "react";
 
 import PriceList from "./components/PriceList";
+import ViewTab from "./components/ViewTab";
+import{LIST_VIEW,CHART_VIEW} from './utility';
 import "./App.css";
 
 class App extends React.Component {
@@ -46,6 +48,11 @@ class App extends React.Component {
           onDeleteItem={item => {
             console.log("delete:" + item.id);
           }}
+        />
+
+        <ViewTab 
+          activeTab={LIST_VIEW}
+          onTabChange={(view)=>{console.log(view)}}
         />
       </div>
     );
