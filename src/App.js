@@ -2,12 +2,13 @@ import React from "react";
 
 import PriceList from "./components/PriceList";
 import ViewTab from "./components/ViewTab";
-import{LIST_VIEW,CHART_VIEW} from './utility';
+import MonthPicker from "./components/MonthPicker";
+import { LIST_VIEW, CHART_VIEW } from './utility';
 import "./App.css";
 
 class App extends React.Component {
-  onModifyItem = () => {};
-  onDeleteItem = () => {};
+  onModifyItem = () => { };
+  onDeleteItem = () => { };
 
   render() {
     const items = [
@@ -35,11 +36,13 @@ class App extends React.Component {
           iconName: "ios-plane"
         }
       }
-   
+
     ];
 
     return (
       <div className="App">
+
+
         <PriceList
           items={items}
           onModifyItem={item => {
@@ -50,9 +53,15 @@ class App extends React.Component {
           }}
         />
 
-        <ViewTab 
+        <ViewTab
           activeTab={LIST_VIEW}
-          onTabChange={(view)=>{console.log(view)}}
+          onTabChange={(view) => { console.log(view) }}
+        />
+
+        <MonthPicker
+          year={2019}
+          month={5}
+          onChange={(year, month) => { console.log(year, month) }}
         />
       </div>
     );
