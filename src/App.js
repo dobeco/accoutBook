@@ -3,6 +3,7 @@ import React from "react";
 import PriceList from "./components/PriceList";
 import ViewTab from "./components/ViewTab";
 import MonthPicker from "./components/MonthPicker";
+import CreateBtn from "./components/CreateBtn";
 import { LIST_VIEW, CHART_VIEW } from './utility';
 import "./App.css";
 
@@ -63,6 +64,7 @@ class App extends React.Component {
           month={5}
           onChange={(year, month) => { console.log(year, month) }}
         />
+        <CreateBtn onClick={item => { console.log('a') }} />
       </div>
     );
   }
