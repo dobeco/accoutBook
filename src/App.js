@@ -4,6 +4,7 @@ import PriceList from "./components/PriceList";
 import ViewTab from "./components/ViewTab";
 import MonthPicker from "./components/MonthPicker";
 import CreateBtn from "./components/CreateBtn";
+import TotalPrice from "./components/TotalPrice";
 import { LIST_VIEW, CHART_VIEW } from './utility';
 import "./App.css";
 
@@ -65,6 +66,7 @@ class App extends React.Component {
           onChange={(year, month) => { console.log(year, month) }}
         />
         <CreateBtn onClick={item => { console.log('a') }} />
+        <TotalPrice income="15" outcome="555" />
       </div>
     );
   }
